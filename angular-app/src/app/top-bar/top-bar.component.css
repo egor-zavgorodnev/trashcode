@@ -1,0 +1,14 @@
+.right-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-panel__note {
+    margin-right: 10px;
+    color: white;   
+}
+
+.right-panel__note a {
+    color: white;   
+}

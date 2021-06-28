@@ -1,0 +1,11 @@
+<a [routerLink]="['/']">
+  <h1>My Store</h1> 
+</a> 
+ 
+<div class="right-panel">
+  <p *ngIf="name" class="right-panel__note">Добро пожаловать, <a routerLink="/profile">{{name}}</a></p>
+  <a routerLink="/cart" class="button fancy-button">
+    <i class="material-icons">shopping_cart</i>Checkout
+  </a>
+</div>
+
