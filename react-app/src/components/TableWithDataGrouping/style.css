@@ -1,0 +1,8 @@
+.table-block {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .table-block table td {
+    padding: 10px;
+  }

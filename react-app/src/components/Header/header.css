@@ -1,0 +1,25 @@
+.header {
+    margin-top: 15px;
+  }
+  
+  .header-content {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+  }
+  
+  .header-content__title {
+    text-align: center;
+  }
+  
+  .header-content__profile {
+    text-align: center;
+  }
+  
+  .header-content__profile span {
+    margin-left: 10px;
+  }
+  
+  .header-content__profile img {
+    width: 64px;
+    height: 64px;
+  }

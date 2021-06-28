@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя выписка | Мой банк</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row header-content">
+                    <div class="col-md-3">
+                        <h1 class="header-content__title">Моя выписка</h1>
+                    </div>
+                    <div class="col-md-3 col-md-offset-6">
+                        <div class="header-content__profile">
+                            <img src="..\images\profile.png" alt="Фото пользователя"><span>Иван Иванов</span>
+                        </div> 
+                    </div> 
+            </div> 
+        </div>
+    </header> 
+    <section class="table">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-group">
+                        <label>Группировка</label>
+                        <select id="group-type-select">
+                            <option>Без группировки</option>
+                            <option>По дате</option>
+                        </select>
+                        <a id="show_link" href="#">Показать все колонки</a>
+                    </div>    
+                    <div class="table-block">
+                        <table id="myTable" width="100%" border="1">
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </section>   
+    <footer class="footer">
+        <p class="footer-copyright">© Мой банк</p>
+    </footer>
+    <script src="my-statement-data.js"></script>
+    <script src="scripts.js"></script>
+</body>   
+</html>    

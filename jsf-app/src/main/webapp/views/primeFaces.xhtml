@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>PF</title>
+</h:head>
+<h:body>
+    <h1>Hello!</h1>
+    <h2>Ajax Event</h2>
+    <h:form>
+        <h:panelGrid columns="3" cellpadding="5">
+            <h:outputText value="KeyUp Event: " />
+            <p:inputText id="firstname" value="#{pfBean.name}" placeholder="Enter Text">
+                <p:ajax event="keyup" update="out" />
+            </p:inputText>
+            <h:outputText id="out" value="#{pfBean.name}" />
+        </h:panelGrid>
+    </h:form>
+
+    <h:form id="form">
+        <h3 style="margin-top:0">Course Description</h3>
+        <p:tabView>
+            <p:tab title="Java">
+                <h:panelGrid columns="1" cellpadding="10">
+                    <h:outputText
+                            value="Java is a programming language and a platform.
+Java is a high level, robust, secured and object-oriented programming language.
+Platform: Any hardware or software environment in which a program runs, is known as a platform.
+Since Java has its own runtime environment (JRE) and API, it is called platform." />
+                    <h:outputText value="Rate Java:"/>
+                    <p:rating value="5"/>
+                    <h:outputText value="Pick up color just by fun :) " />
+                    <p:colorPicker value="#000000" />
+                    <h3>Насколько вас заебала джава?</h3>
+                    <p:growl id="growl" autoUpdate="true"/>
+                    <p:knob value="#{pfBean.tiredValue}">
+                        <p:ajax update="growl" listener="#{pfBean.onTiredChange}"/>
+                    </p:knob>
+                    <h:outputText value="Введите что-нибудь: " />
+                    <p:inputText id="username" title="Подсказка дня: ты еблан иди нахуй" />
+                    <p:tooltip id="toolTipFocus" for="username" showEvent="focus" hideEvent="blur" />
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Graphs">
+                <h:panelGrid columns="1" cellpadding="10">
+                    <p:chart type="line" model="#{area.drawArea}" style="height:300px" />
+                </h:panelGrid>
+            </p:tab>
+        </p:tabView>
+    </h:form>
+</h:body>
+</html>

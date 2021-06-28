@@ -1,0 +1,41 @@
+body {
+  font-size: 20px !important;
+}
+
+.table {
+  margin-top: 30px;
+}
+
+.table-titles ul {
+  border: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.table-titles ul li {
+  padding: 25px 80px;
+}
+
+.table-group select {
+  margin-left: 10px;
+}
+
+.table-block {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.table-block table td {
+  padding: 10px;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+#show_link {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
